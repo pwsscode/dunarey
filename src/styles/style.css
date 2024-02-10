@@ -49,7 +49,7 @@ padding: 20px 4%;
 position: fixed;
 top: 0;
 left: 0;
-transition: .2s;
+transition: .1s;
 }
 
 header.rolagem {
@@ -120,6 +120,7 @@ main {
    margin: auto;
    height: 100vh;
    width: 80vw;
+   padding: 20px;
    background-color: #fff;
    border-radius: 5px;
 }
@@ -130,13 +131,40 @@ main {
    color: var(--color-gren);
 }
 
-.sobre_a_banda .imagens {
+.sobre_a_banda .flex {
+  
+   display: flex;
+   justify-content: space-between;
    
 }
 
+.sobre_a_banda img {
+   height: 250px;
+   border-radius: 5px;
+}
+
+
 .sobre_a_banda p {
+   margin-left: 20px;
    text-align: justify;
    font-size: large;
+}
+
+.integrantes {
+   display: flex;
+   justify-content: space-between;
+   margin: 100px 100px 0;
+   cursor: pointer;
+}
+
+.integrantes img {
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+}
+
+.integrantes a#guitarista:hover p#bio-dunarey, p#bio-baterista, p#bio-tecladista {
+   display: none;
 }
 
 footer{
