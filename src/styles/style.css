@@ -16,13 +16,13 @@ body {
       "footer"
    ;
    grid-template-columns: 1fr;
-   height: 100vh;
+   height: 300vh;
    margin: 0 auto;
    max-width: 1200px;
    @media (min-width: 48em) {
       grid-gap: 0;
       grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: .5fr 5fr 0.5fr;
+      grid-template-rows: .5fr 5fr .5fr;
       grid-template-areas: 
          "header header header header header header"
          "main   main   main   main   main   main  "
@@ -63,6 +63,7 @@ header.rolagem a {
 
 header img {
    height: 50px;
+   margin-left: 5px;
 }
 
 header ul li {
@@ -112,59 +113,87 @@ main {
    background-size: cover;
 }
 
-.banner span {
-   color: var(--color-gren);
-}
-
 .sobre_a_banda {
    margin: auto;
-   height: 100vh;
-   width: 80vw;
+   height: 85vh;
+   width: 90vw;
    padding: 20px;
    background-color: #fff;
    border-radius: 5px;
 }
 
-.sobre_a_banda h1 {
+.grid_sobre_a_banda {
+   display: grid;
+   grid-template-areas:
+      "title"
+      "imagens-banda"
+      "textos-banda"
+      "integrantes"
+   ;
+   grid-template-columns: 1fr;
+   height: 100vh;
+   margin: 0 auto;
+   max-width: 1200px;
+   @media (min-width: 48em) {
+      grid-gap: 30px;
+      grid-template-columns: .1fr 1fr 1fr 1fr;
+      grid-template-rows: .1fr .5fr .2fr;
+      grid-template-areas: 
+         "title title title title"
+         ". imagens-banda  textos-banda ."
+         "integrantes integrantes integrantes integrantes"
+      ;
+   }
+
+}
+
+.grid_sobre_a_banda .title{
+   grid-area: title;
+   width: 100%;
    font-size: xx-large;
    padding: 20px;
    color: var(--color-gren);
 }
 
-.sobre_a_banda .flex {
-  
-   display: flex;
-   justify-content: space-between;
-   
+.grid_sobre_a_banda .imagens-banda {
+   grid-area: imagens-banda;
+   justify-self: center;
 }
 
-.sobre_a_banda img {
-   height: 250px;
+.imagens-banda img{
+   height: 200px;
    border-radius: 5px;
 }
 
+.grid_sobre_a_banda .textos-banda {
+   grid-area: textos-banda;
+   align-self: flex-start;
+}
 
-.sobre_a_banda p {
-   margin-left: 20px;
-   text-align: justify;
+.textos-banda {
    font-size: large;
+   margin-top: 20px;
+}
+
+.grid_sobre_a_banda .integrantes {
+   grid-area: integrantes;
+   width: 100%;
 }
 
 .integrantes {
    display: flex;
-   justify-content: space-between;
-   margin: 100px 100px 0;
-   cursor: pointer;
+   justify-content: space-around;
 }
 
 .integrantes img {
    height: 100px;
    width: 100px;
    border-radius: 50%;
+   transition: transform .2s;
 }
 
-.integrantes a#guitarista:hover p#bio-dunarey, p#bio-baterista, p#bio-tecladista {
-   display: none;
+.integrantes a:hover {
+   transform: scale(1.1);
 }
 
 footer{
