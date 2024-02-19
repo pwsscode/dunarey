@@ -104,8 +104,8 @@ main {
 }
 
 .banner {
-   margin: 20px auto 0;
-   height: 100vh;
+   margin: 0 auto;
+   height: 75vh;
    width: 60vw;
    background-image: url(../assets/imagens/banner.jpg);
    background-position: center;
