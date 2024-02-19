@@ -140,7 +140,7 @@ main {
       grid-template-rows: .1fr .5fr .2fr;
       grid-template-areas: 
          "title title title title"
-         ". imagens-banda  textos-banda ."
+         ". conteudo conteudo ."
          "integrantes integrantes integrantes integrantes"
       ;
    }
