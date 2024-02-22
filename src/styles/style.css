@@ -116,7 +116,7 @@ main {
 .sobre_a_banda {
    margin: auto;
    height: 85vh;
-   width: 90vw;
+   width: 96vw;
    padding: 20px;
    background-color: #fff;
    border-radius: 5px;
@@ -131,49 +131,66 @@ main {
       "integrantes"
    ;
    grid-template-columns: 1fr;
+   gap: 15px;
    height: 100vh;
-   margin: 0 auto;
+   width: 100%;
+   margin: auto;
    max-width: 1200px;
    @media (min-width: 48em) {
-      grid-gap: 30px;
       grid-template-columns: .1fr 1fr 1fr 1fr;
       grid-template-rows: .1fr .5fr .2fr;
       grid-template-areas: 
          "title title title title"
-         ". conteudo conteudo ."
+         "conteudo conteudo conteudo conteudo"
          "integrantes integrantes integrantes integrantes"
       ;
    }
 
 }
 
-.grid_sobre_a_banda .title{
+.grid_sobre_a_banda .title {
    grid-area: title;
    width: 100%;
+   margin: auto;
    font-size: xx-large;
-   padding: 20px;
    color: var(--color-gren);
 }
 
-.grid_sobre_a_banda .imagens-banda {
-   grid-area: imagens-banda;
-   justify-self: center;
+.grid_sobre_a_banda .bios {
+   grid-area: conteudo;
+   width: 100%;
 }
 
-.imagens-banda img{
-   height: 200px;
+.integrante {
+   margin: auto;
+   height: 300px;
+   width: 600px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   padding-left: 0;
+   border: 1px solid #ddd;
    border-radius: 5px;
-}
-
-.grid_sobre_a_banda .textos-banda {
-   grid-area: textos-banda;
-   align-self: flex-start;
-}
-
-.textos-banda {
-   font-size: large;
-   margin-top: 20px;
-}
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+ }
+ 
+ .integrante img {
+   width: 45%;
+   height: 300px;
+   margin-right: 20px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+ }
+ 
+ .integrante h2 {
+   width: 50%;
+   color: #333;
+   line-height: 1.5;
+   font-size: 14px;
+ }
+ 
+ 
 
 .grid_sobre_a_banda .integrantes {
    grid-area: integrantes;

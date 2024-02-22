@@ -3,18 +3,31 @@ window.addEventListener('scroll', function(){
     header.classList.toggle('rolagem', window.scrollY > 500)
 })
 
-function mostrarConteudo(id) {
-    const paragrafos = document.querySelectorAll('p');
-    const imagens = document.querySelectorAll('img, #1');
+// Seleciona os elementos do HTML
+const cards = document.querySelectorAll(".integrante");
+const links = document.querySelectorAll(".integrantes a");
 
-    // Esconde todos os parágrafos e imagens
-    paragrafos.forEach(p => p.style.display = 'none');
-    imagens.forEach(img => img.style.display = 'none');
-
-    // Exibe o parágrafo e imagem correspondentes
-    document.getElementById(id).style.display = 'block';
-    document.getElementById('imagem' + id.slice(9)).style.display = 'block';
+// Cria uma função para esconder todos os cards
+function hideAllCards() {
+  for (let card of cards) {
+    card.style.display = "none";
+  }
 }
 
-// Exibe apenas o primeiro parágrafo e a primeira imagem inicialmente
-mostrarConteudo('paragrafo1');
+// Cria uma função para mostrar o card correspondente ao link clicado
+function showCard(index) {
+  hideAllCards();
+  cards[index].style.display = "flex";
+}
+
+// Adiciona um evento de clique a cada link
+for (let i = 0; i < links.length; i++) {
+  links[i].addEventListener("click", function () {
+    showCard(i);
+  });
+}
+
+// Mostra apenas o primeiro card quando a página for carregada
+window.addEventListener("load", function () {
+  showCard(0);
+});
