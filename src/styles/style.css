@@ -183,6 +183,11 @@ main {
    border-bottom-left-radius: 5px;
  }
  
+ .integrante h1 {
+   width: 50%;
+   color: var(--color-gren);
+ }
+
  .integrante h2 {
    width: 50%;
    color: #333;
