@@ -123,30 +123,30 @@ main {
 }
 
 .banner {
-   margin: 0 auto;
-   height: 75vh;
+   margin: auto;
+   height: 85vh;
    width: 60vw;
-   background-image: url(../assets/imagens/banner.jpg);
+   background-image: url(../assets/imagens/banner.png);
    background-position: center;
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size:contain;
 }
 
-.sobre_a_banda {
-   margin: auto;
+.conteudo {
+   margin: 0 auto 40px;
    height: 85vh;
    width: 96vw;
    padding: 20px;
    background-color: #121212;
    border-radius: 5px;
+   
 }
 
 .grid_sobre_a_banda {
    display: grid;
    grid-template-areas:
       "title"
-      "imagens-banda"
-      "textos-banda"
+      "conteudo"
       "integrantes"
    ;
    grid-template-columns: 1fr;
@@ -190,7 +190,7 @@ main {
    justify-content: space-between;
    padding: 20px;
    padding-left: 0;
-   border: 1px solid black;
+   border: 2px solid black;
    border-left: none;
    border-radius: 5px;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -199,13 +199,16 @@ main {
  .integrante img {
    width: 45%;
    height: 250px;
-   margin-right: 20px;
+   margin-right: 10px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
  }
  
  .integrante h1 {
    width: 100%;
    color: black;
    text-align: center;
+   margin-bottom: 15px;
  }
 
  .integrante h2 {
@@ -234,11 +237,54 @@ main {
    border-radius: 50%;
    transition: all .5s ease;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-
+  
 }
 
 .integrantes a:hover {
    transform: scale(1.1);
+}
+
+.grid_midia {
+   display: grid;
+   grid-template-areas:
+      "title"
+      "conteudo"
+   ;
+   grid-template-columns: 1fr;
+   height: 100vh;
+   width: 100%;
+   margin: auto;
+   max-width: 1200px;
+   @media (min-width: 48em) {
+      grid-template-columns: .1fr 1fr 1fr 1fr;
+      grid-template-rows: .1fr .5fr .2fr;
+      grid-template-areas: 
+         "title title title title"
+         ". conteudo conteudo ."
+      ;
+   }
+
+}
+
+.grid_midia .conteudo{
+   grid-area: conteudo;
+   width: 100%;
+}
+
+.grid_midia .musica {
+   width: 93vw;  
+}
+
+
+
+.grid_midia .title {
+   grid-area: title;
+   width: 100%;
+   margin: auto;
+   margin-bottom: 50px;
+   font-size: xx-large;
+   color: var(--color-gren);
+   text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 footer{
