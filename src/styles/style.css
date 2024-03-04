@@ -320,7 +320,7 @@ main {
 
 .grid_midia a {
    font-family: var(--font-bebas-neue);
-   color: red;
+   color: #fff;
    font-size: xx-large;
    cursor: pointer;
    margin-right: 5px;
