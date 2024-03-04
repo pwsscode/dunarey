@@ -124,7 +124,7 @@ main {
 
 .banner {
    margin: auto;
-   height: 85vh;
+   height: 86vh;
    width: 60vw;
    background-image: url(../assets/imagens/banner.png);
    background-position: center;
@@ -133,7 +133,7 @@ main {
 }
 
 .conteudo {
-   margin: 0 auto 40px;
+   margin: 0 auto 12px;
    height: 85vh;
    width: 96vw;
    padding: 20px;
@@ -253,28 +253,57 @@ main {
    grid-template-columns: 1fr;
    height: 100vh;
    width: 100%;
+   gap: 1px;
    margin: auto;
    max-width: 1200px;
    @media (min-width: 48em) {
       grid-template-columns: .1fr 1fr 1fr 1fr;
-      grid-template-rows: .1fr .5fr .2fr;
+      grid-template-rows: .1fr .5fr;
       grid-template-areas: 
          "title title title title"
-         ". conteudo conteudo ."
+         "spotify spotify spotify spotify"
+         "youtube youtube youtube youtube"
       ;
    }
 
 }
 
-.grid_midia .conteudo{
-   grid-area: conteudo;
-   width: 100%;
+.grid_midia .spotify {
+   grid-area: spotify;
+   margin: 0 auto 12px;
+   height: 85vh;
+   width: 96vw;
+   padding: 20px;
+   background-color: #121212;
+   border-radius: 5px;
+  
 }
 
-.grid_midia .musica {
-   width: 93vw;  
+.grid_midia .youtube {
+   grid-area: youtube;
+   margin: 0 auto 5px;
+   height: 85vh;
+   width: 96vw;
+   padding: 20px;
+   background-color: #121212;
+   border-radius: 5px;
+  
 }
 
+.grid_midia .spotify .widget {
+   width: 100%;  
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.grid_midia .youtube .widget {
+   width: 100%;  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 
 
 .grid_midia .title {
@@ -285,10 +314,36 @@ main {
    font-size: xx-large;
    color: var(--color-gren);
    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+   display: flex;
+   justify-content: space-between;
 }
 
-footer{
-    grid-area: footer;
-    background-color: blue;
+.grid_midia a {
+   font-family: var(--font-bebas-neue);
+   color: red;
+   font-size: xx-large;
+   cursor: pointer;
+   margin-right: 5px;
+   position: relative;
+   text-decoration: none;
 }
-  
+
+.grid_midia a:hover {
+   color: red
+}
+
+.grid_midia a::after { 
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 0%;
+   height: 4px;
+   background-color: red;
+   transition: .6s ease-in-out;
+}
+
+.grid_midia a:hover::after {
+   width: 100%;
+   color: red;
+}
