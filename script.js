@@ -1,7 +1,20 @@
 window.addEventListener('scroll', function(){
     let header = document.querySelector('#header')
-    header.classList.toggle('rolagem', window.scrollY > 500)
+    header.classList.toggle('rolagem', window.scrollY > 495)
 })
+
+  // Adicione um evento de clique para os itens do menu
+  document.querySelectorAll('nav a').forEach(item => {
+    item.addEventListener('click', scrollToSection);
+});
+
+// Função para rolar suavemente para a seção correspondente
+function scrollToSection(event) {
+    event.preventDefault();
+    const targetId = event.target.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+}
 
 // Seleciona os elementos do HTML
 const cards = document.querySelectorAll(".integrante");
