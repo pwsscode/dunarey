@@ -14,6 +14,25 @@
 
 </head>
 <body>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form
+      action="https://formsubmit.co/ajax/pedrosimplicio.code@gmail.com"
+      method="POST"
+      data-form
+    >
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" required />
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" required />
+      <label for="mensagem">Mensagem</label>
+      <textarea name="mensagem" id="mensagem" required></textarea>
+      <button id="cont" type="submit" data-button>Enviar</button>
+    </form>
+    </div>
+  </div>
+
   <div class="wrapper">
 
     <header id="header">
@@ -24,12 +43,12 @@
 
           <nav id="menu"> 
 
-              <a href=""><img src="./src/assets/imagens/logo.png" alt="Logo da banda Dunarey"></a>
+              <img src="./src/assets/imagens/logo.png" alt="Logo da banda Dunarey">
               <a href="#sobreabanda">Sobre a banda</a>
               <a href="#spotify">Musicas</a>
               <a href="#youtube">Videos</a>
               <a href="">Agenda</a>
-              <button class="contato">Contato</button>
+              <button id="contato" class="contato">Contato</button>
           
           </nav>
 
