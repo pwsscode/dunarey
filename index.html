@@ -23,11 +23,11 @@
       data-form
     >
       <label for="nome">Nome</label>
-      <input type="text" name="nome" id="nome" required />
+      <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
       <label for="email">E-mail</label>
-      <input type="email" name="email" id="email" required />
+      <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required />
       <label for="mensagem">Mensagem</label>
-      <textarea name="mensagem" id="mensagem" required></textarea>
+      <textarea name="mensagem" id="mensagem" placeholder="Deixe sua mensagem aqui" required></textarea>
       <button id="cont" type="submit" data-button>Enviar</button>
     </form>
     </div>
@@ -43,11 +43,12 @@
 
           <nav id="menu"> 
 
-              <img src="./src/assets/imagens/logo.png" alt="Logo da banda Dunarey">
+              <img src="./src/assets/imagens/logo2.png" alt="Logo da banda Dunarey">
               <a href="#sobreabanda">Sobre a banda</a>
               <a href="#spotify">Musicas</a>
               <a href="#youtube">Videos</a>
               <a href="">Agenda</a>
+              <a id="adm" href="">ADM</a>
               <button id="contato" class="contato">Contato</button>
           
           </nav>
@@ -60,11 +61,13 @@
 
     <main>
     
-      <section class="banner"></section>
+      <section class="banner">
+        <h1>DUNA<span>REY</span></h1>
+      </section>
 
-      <section class="conteudo" id="sobreabanda">
+      <div class="grid_sobre_a_banda">
 
-        <div class="grid_sobre_a_banda">
+         <section class="conteudo" id="sobreabanda">
 
           <h1 class="title">SOMOS A DUNAREY</h1>
 
@@ -135,7 +138,7 @@
 
             <div class="widget">
 
-              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/4Kg5o9LtO5ju6FfPdGDyPA?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5LTcYObS1Q3mUzTWoAf5Vo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             
             </div>
 

@@ -155,43 +155,47 @@ body {
 .flex {
    display: flex;
    align-items: center;
-   justify-content: space-between;
 }
 
-header{
+header {
 width: 100vw;
 grid-area: header;
-padding: 20px 4%;
+background: linear-gradient(to bottom,black, transparent);
+padding: 40px 10px;
 position: fixed;
-margin-top: 0;
+margin-top: 0px;
 transition: .1s;
+
 }
 
 header.rolagem {
-   background-color: #000;
-   padding: 10px 4%;
+   background-color: black;
+   padding: 5px 10px;
 }
 
 header.rolagem a {
-   margin: 1px 0;
    color: #84868f;
+}
+
+header.rolagem #adm {
+   color: #ffffff41;
 }
 
 header img {
    height: 50px;
-   margin-left: 5px;
 }
 
 nav {
-   width: 100%;
+   width: 100vw;
    display: flex;
-   justify-content: space-between;
+   justify-content: space-around;
    align-items: center;
 }
 
 nav a {
    position: relative;
    color:#fff;
+   text-shadow: 1px 1px 5px rgb(0, 0, 0);
    text-decoration: none;
    font-size:x-large;
 }
@@ -214,6 +218,18 @@ nav a::after {
 nav a:hover::after {
    width: 100%;
    color: var(--color-gren);
+}
+
+nav #adm {
+   color: #ffffff88;
+}
+
+nav #adm:hover {
+ color: #c45660;
+}
+
+nav #adm::after {
+   content: none;
 }
 
 .contato {
@@ -242,18 +258,34 @@ main {
 .banner {
    margin: auto;
    height: 100vh;
-   width: 40vw;
-   background-image: url(../assets/imagens/banner.png);
-   background-position: bottom;
+   width: 98vw;
+   background-image: url(../assets/imagens/banner.jpg);
+   background-position: center;
    background-repeat: no-repeat;
-   background-size:contain;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+}
+
+.banner h1 {
+   color: var(--color-gren);
+   font-size: 200px;
+   text-shadow: 1px 1px 5px var(--color-black);
+   opacity: 30%;
+   margin-top: 410px;
+   margin-bottom: 0;
+}
+
+.banner span {
+   color: #c45660;
 }
 
 .conteudo {
    margin: auto;
    height: 100vh;
-   width: 96vw;
-   padding: 10px;
+   width: 98vw;
+   padding: 20px;
+   padding-top: 120px;
    background-color: var(--color-black);
    border-radius: 5px;
    
@@ -286,11 +318,11 @@ main {
 .grid_sobre_a_banda .title {
    grid-area: title;
    width: 100%;
-   margin: auto;
    font-size: xx-large;
    color: var(--color-gren);
    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
+
 
 .grid_sobre_a_banda .bios {
    grid-area: conteudo;
@@ -298,19 +330,19 @@ main {
 }
 
 .integrante {
-   background-color:  #84868f;
-   margin: 15px auto;
+   background-color:  #84868fad;
+   margin: 0 auto 50px;
    height: 250px;
    width: 500px;
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-around;
    padding: 20px;
    padding-left: 0;
    border: 2px solid black;
    border-left: none;
-   border-bottom-right-radius: 50px;
-   border-top-right-radius: 50px;
+   border-bottom-right-radius: 5px;
+   border-top-right-radius: 5px;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
  }
  
@@ -353,7 +385,7 @@ main {
 .integrantes img {
    height: 100px;
    width: 100px;
-   border-radius: 50%;
+   border-radius: 50px;
    transition: all .5s ease;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   
@@ -395,7 +427,7 @@ main {
    margin: auto;
    margin-top: 10px;
    height: 100vh;
-   width: 96vw;
+   width: 98vw;
    padding: 20px;
    padding-top: 120px;
    background-color: var(--color-black);
@@ -408,7 +440,7 @@ main {
    margin: auto;
    margin-top: 10px;
    height: 100vh;
-   width: 96vw;
+   width: 98vw;
    padding: 20px;
    padding-top: 120px;
    background-color: var(--color-black);
@@ -455,7 +487,7 @@ main {
 }
 
 .grid_midia a:hover {
-   color: red
+   color: #c45660
 }
 
 .grid_midia a::after { 
@@ -465,11 +497,11 @@ main {
    bottom: -2px;
    width: 0%;
    height: 4px;
-   background-color: red;
+   background-color: #c45660;
    transition: .6s ease-in-out;
 }
 
 .grid_midia a:hover::after {
    width: 100%;
-   color: red;
+   color: #c45660;
 }
