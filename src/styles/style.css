@@ -329,7 +329,7 @@ main {
 
 .integrante {
    background-color:  #ffffff81;
-   margin: 0 auto 50px;
+   margin: 0 auto 30px;
    height: 250px;
    width: 500px;
    display: flex;
@@ -378,6 +378,13 @@ main {
 .integrantes {
    display: flex;
    justify-content: space-around;
+}
+
+.integrantes h2 {
+   color: var(--color-gren);
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
 }
 
 .integrantes img {
