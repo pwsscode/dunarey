@@ -268,16 +268,14 @@ main {
 }
 
 .banner h1 {
-   color: var(--color-gren);
+   color: #00c59a3d;
    font-size: 200px;
-   text-shadow: 1px 1px 5px var(--color-black);
-   opacity: 30%;
    margin-top: 410px;
    margin-bottom: 0;
 }
 
 .banner span {
-   color: #c45660;
+   color: #c4565f3c;
 }
 
 .conteudo {
@@ -330,7 +328,7 @@ main {
 }
 
 .integrante {
-   background-color:  #84868fad;
+   background-color:  #ffffff81;
    margin: 0 auto 50px;
    height: 250px;
    width: 500px;
@@ -343,7 +341,7 @@ main {
    border-left: none;
    border-bottom-right-radius: 5px;
    border-top-right-radius: 5px;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 2px 5px var(--color-black);
  }
  
  .integrante img {
