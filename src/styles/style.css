@@ -407,6 +407,7 @@ header {
    width: 300px;
    padding: 25px;
    text-align: left;
+   line-height: 1.1;
 }
 
 .bio-text h2 {
