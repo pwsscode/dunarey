@@ -24,16 +24,16 @@ body {
 }
 
 .modal-content {
-   background-color: var(--color-black);
+   background: rgb(18, 25, 43);
+   background: linear-gradient(190deg, rgba(18, 25, 43, 1) 10%, rgba(18, 18, 18, 1) 90%);
    margin: auto;
    padding: 20px;
-   border: 1px solid #888;
    width: 40%;
    border-radius: 5px;
 }
 
 .close {
-   color: #aaaaaa;
+   color: #bbb;
    float: right;
    font-size: 28px;
    font-weight: bold;
@@ -41,7 +41,7 @@ body {
 
 .close:hover,
 .close:focus {
-   color: #000;
+   color: #c45660;
    text-decoration: none;
    cursor: pointer;
 }
@@ -70,7 +70,7 @@ input,
 textarea {
    margin-bottom: 1rem;
    color: white;
-   background: #555b69;
+   background: #bbb;
    border: 0.125rem solid transparent;
    border-radius: 5px;
    transition: border-color 0.3s, box-shadow 0.3s;
@@ -86,7 +86,7 @@ textarea:focus {
 
 label {
    margin-bottom: 0.5rem;
-   color: #84868f;
+   color: #fff;
 }
 
 textarea {
@@ -97,8 +97,8 @@ textarea {
 #cont {
    border: none;
    border-radius: 99px;
-   color: white;
-   background: #555b69;
+   color: #121212;
+   background: #bbb;
    cursor: pointer;
    transition: 0.3s;
 }
@@ -106,7 +106,7 @@ textarea {
 #cont:hover,
 #cont:focus {
    outline: none;
-   background: var(--color-gren);
+   background-color: #00c59a;
 }
 
 #cont:disabled {
@@ -303,9 +303,11 @@ main {
    }
 
 }
+
 header {
    grid-area: header;
 }
+
 .grid_sobre_a_banda .conteudo {
    grid-area: conteudo;
    margin: auto;
@@ -333,7 +335,7 @@ header {
    display: flex;
    justify-content: center;
    align-items: center;
-   
+
 }
 
 .integrantes {
@@ -356,7 +358,7 @@ header {
    padding: 40px 10px;
    width: 700px;
    margin: auto;
-   
+
 }
 
 .bio-container {
@@ -404,7 +406,7 @@ header {
    justify-content: center;
    width: 300px;
    padding: 25px;
-   text-align:left;
+   text-align: left;
 }
 
 .bio-text h2 {
