@@ -3,128 +3,129 @@
    padding: 0;
    box-sizing: border-box;
 }
+
 body {
    font-family: var(--font-bebas-neue);
    background-color: #121212;
 }
 
 .modal {
-   display: none; 
-   position: fixed; 
-   z-index: 1; 
-   padding-top: 100px; 
+   display: none;
+   position: fixed;
+   z-index: 1;
+   padding-top: 100px;
    left: 0;
    top: 0;
-   width: 100%; 
-   height: 100%; 
-   overflow: auto; 
-   background-color: rgb(0,0,0); 
-   background-color: rgba(0,0,0,0.4); 
- }
- 
- .modal-content {
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
    background-color: var(--color-black);
    margin: auto;
    padding: 20px;
    border: 1px solid #888;
    width: 40%;
    border-radius: 5px;
- }
- 
- .close {
+}
+
+.close {
    color: #aaaaaa;
    float: right;
    font-size: 28px;
    font-weight: bold;
- }
- 
- .close:hover,
- .close:focus {
+}
+
+.close:hover,
+.close:focus {
    color: #000;
    text-decoration: none;
    cursor: pointer;
- }
+}
 
- form {
+form {
    width: 100%;
    max-width: 30rem;
- }
- 
- label,
- input,
- textarea,
- button {
+}
+
+label,
+input,
+textarea,
+button {
    display: block;
- }
+}
 
- input,
-  textarea,
-  #cont {
-    width: 100%;
-    padding: 1.25rem;
-    font-weight: 700;
-  }
+input,
+textarea,
+#cont {
+   width: 100%;
+   padding: 1.25rem;
+   font-weight: 700;
+}
 
-  input,
-  textarea {
-    margin-bottom: 1rem;
-    color: white;
-    background: #555b69;
-    border: 0.125rem solid transparent;
-    border-radius: 5px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-  }
- 
-  input:hover,
-  input:focus,
-  textarea:hover,
-  textarea:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.1rem var(--color-gren);
-  }
+input,
+textarea {
+   margin-bottom: 1rem;
+   color: white;
+   background: #555b69;
+   border: 0.125rem solid transparent;
+   border-radius: 5px;
+   transition: border-color 0.3s, box-shadow 0.3s;
+}
 
-  label {
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+   outline: none;
+   box-shadow: 0 0 0 0.1rem var(--color-gren);
+}
+
+label {
    margin-bottom: 0.5rem;
    color: #84868f;
- }
- 
- textarea {
+}
+
+textarea {
    min-height: 8rem;
    resize: vertical;
- }
- 
- #cont {
+}
+
+#cont {
    border: none;
    border-radius: 99px;
    color: white;
-   background:  #555b69;
+   background: #555b69;
    cursor: pointer;
    transition: 0.3s;
- }
- 
- #cont:hover,
- #cont:focus {
+}
+
+#cont:hover,
+#cont:focus {
    outline: none;
    background: var(--color-gren);
- }
- 
- #cont:disabled {
+}
+
+#cont:disabled {
    cursor: not-allowed;
    background: #555b69;
- }
- 
- .success,
- .error {
+}
+
+.success,
+.error {
    text-align: center;
- }
- 
- .success {
+}
+
+.success {
    color: var(--color-gren);
- }
- 
- .error {
+}
+
+.error {
    color: tomato;
- }
+}
 
 .wrapper {
    display: grid;
@@ -136,11 +137,12 @@ body {
    height: 300vh;
    margin: 0 auto;
    max-width: 1200px;
+
    @media (min-width: 48em) {
       grid-gap: 0;
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: .5fr 5fr;
-      grid-template-areas: 
+      grid-template-areas:
          "header header header header header header"
          "main   main   main   main   main   main  "
       ;
@@ -158,12 +160,13 @@ body {
 }
 
 header {
-width: 100vw;
-grid-area: header;
-padding: 40px 10px;
-position: fixed;
-margin-top: 0px;
-transition: .1s;
+   z-index: 9900;
+   width: 100vw;
+   grid-area: header;
+   padding: 40px 10px;
+   position: fixed;
+   margin-top: 0px !important;
+   transition: .1s;
 
 }
 
@@ -193,17 +196,17 @@ nav {
 
 nav a {
    position: relative;
-   color:#fff;
+   color: #fff;
    text-shadow: 1px 1px 5px rgb(0, 0, 0);
    text-decoration: none;
-   font-size:x-large;
+   font-size: x-large;
 }
 
 nav a:hover {
    color: var(--color-gren);
 }
 
-nav a::after { 
+nav a::after {
    content: "";
    position: absolute;
    left: 0;
@@ -224,7 +227,7 @@ nav #adm {
 }
 
 nav #adm:hover {
- color: #c45660;
+   color: #c45660;
 }
 
 nav #adm::after {
@@ -288,17 +291,20 @@ main {
    height: 100vh;
    width: 100%;
    max-width: 1200px;
+
    @media (min-width: 48em) {
       grid-template-columns: .1fr 1fr 1fr 1fr;
-      grid-template-rows: .3fr .1fr 1fr .5fr;
-      grid-template-areas: 
+      grid-template-rows: .3fr .1fr 1fr;
+      grid-template-areas:
          "header header header header"
          "title title title title"
          "conteudo conteudo conteudo conteudo"
-         "integrantes integrantes integrantes integrantes"
       ;
    }
 
+}
+header {
+   grid-area: header;
 }
 .grid_sobre_a_banda .conteudo {
    grid-area: conteudo;
@@ -307,12 +313,13 @@ main {
    width: 98vw;
    padding: 20px;
    padding-top: 120px;
-   background: rgb(18,25,43);
-background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
+   background: rgb(18, 25, 43);
+   background: linear-gradient(190deg, rgba(18, 25, 43, 1) 10%, rgba(18, 18, 18, 1) 90%);
    border-radius: 5px;
-   
-   
+
+
 }
+
 .grid_sobre_a_banda .title {
    grid-area: title;
    width: 100%;
@@ -321,83 +328,94 @@ background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
-
-.grid_sobre_a_banda .bios {
-   grid-area: conteudo;
+.banda {
    width: 100%;
-}
-
-.integrante {
-   background-color:  #ffffff81;
-   margin: 0 auto 30px;
-   height: 250px;
-   width: 500px;
    display: flex;
+   justify-content: center;
    align-items: center;
-   justify-content: space-around;
-   padding: 20px;
-   padding-left: 0;
-   border: 2px solid black;
-   border-left: none;
-   border-bottom-right-radius: 5px;
-   border-top-right-radius: 5px;
-   box-shadow: 0 2px 5px var(--color-black);
- }
- 
- .integrante img {
-   width: 45%;
-   height: 120%;
-   padding: .5px;
-   padding-left: 0;
-   margin-right: 10px;
- }
- 
- .integrante h1 {
-   width: 100%;
-   color: var(--color-black);
-   text-align: center;
-   margin-bottom: 15px;
-   font-size: large;
- }
-
- .integrante h2 {
-   width: 100%;
-   color: var(--color-black);
-   line-height: 1.5;
-   font-size: 14px;
-   text-align: justify;
- }
- 
- 
-
-.grid_sobre_a_banda .integrantes {
-   grid-area: integrantes;
-   width: 100%;
+   
 }
 
 .integrantes {
-   display: flex;
-   justify-content: space-around;
+   grid-area: conteudo;
+   position: relative;
+   width: 700px;
+   margin: auto;
+   overflow: hidden;
 }
 
-.integrantes h2 {
+.integrantes .nb {
    color: var(--color-gren);
+   --swiper-pagination-color: var(--color-gren);
+   --swiper-pagination-bullet-inactive-color: var(--color-black);
+}
+
+
+
+.integrantes .slide {
+   padding: 40px 10px;
+   width: 700px;
+   margin: auto;
+   
+}
+
+.bio-container {
    display: flex;
+   background-color: #12192b63;
+   width: 600px;
+   height: 350px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   padding: 20px;
+   margin: auto;
+
+}
+
+.bio-image {
+   flex: 2;
+}
+
+.bio-image .redes {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 150px;
+   margin: auto;
+}
+
+.bio-image .redes a {
+   margin-top: 30px;
+   text-decoration: none;
+   color: var(--color-gren);
+   font-size: x-large;
+}
+
+.bio-image img {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+}
+
+.bio-text {
+   flex: 3;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
    justify-content: center;
-   margin-top: 10px;
+   width: 300px;
+   padding: 25px;
+   text-align:left;
 }
 
-.integrantes img {
-   height: 100px;
-   width: 100px;
-   border-radius: 50px;
-   transition: all .5s ease;
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  
+.bio-text h2 {
+   color: var(--color-gren);
+   margin-bottom: 20px;
+   font-size: x-large;
+
 }
 
-.integrantes a:hover {
-   transform: scale(1.1);
+.bio-text p {
+   color: #fff;
 }
 
 .grid_midia {
@@ -410,10 +428,11 @@ background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
    height: 100vh;
    width: 100%;
    max-width: 1200px;
+
    @media (min-width: 48em) {
       grid-template-columns: .1fr 1fr 1fr 1fr;
       grid-template-rows: .1fr .1fr 1fr 1fr;
-      grid-template-areas: 
+      grid-template-areas:
          "header header header header"
          "title title title title"
          "spotify spotify spotify spotify"
@@ -437,7 +456,7 @@ background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
    padding-top: 120px;
    background-color: #121212;
    border-radius: 5px;
-  
+
 }
 
 .grid_midia .youtube {
@@ -448,13 +467,13 @@ background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
    width: 98vw;
    padding: 20px;
    padding-top: 120px;
-   background-color:  #121212;
+   background-color: #121212;
    border-radius: 5px;
-  
+
 }
 
 .grid_midia .spotify .widget {
-   width: 100%;  
+   width: 100%;
    margin: auto;
    display: flex;
    justify-content: center;
@@ -462,7 +481,7 @@ background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
 }
 
 .grid_midia .youtube .widget {
-   width: 100%;  
+   width: 100%;
    display: flex;
    justify-content: center;
    align-items: baseline;
@@ -495,7 +514,7 @@ background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
    color: #c45660
 }
 
-.grid_midia a::after { 
+.grid_midia a::after {
    content: "";
    position: absolute;
    left: 0;
