@@ -5,7 +5,7 @@
 }
 body {
    font-family: var(--font-bebas-neue);
-   background-color: black;
+   background-color: #121212;
 }
 
 .modal {
@@ -160,7 +160,6 @@ body {
 header {
 width: 100vw;
 grid-area: header;
-background: linear-gradient(to bottom,black, transparent);
 padding: 40px 10px;
 position: fixed;
 margin-top: 0px;
@@ -169,8 +168,8 @@ transition: .1s;
 }
 
 header.rolagem {
-   background-color: black;
-   padding: 5px 10px;
+   background-color: #121212;
+   padding: 10px 10px;
 }
 
 header.rolagem a {
@@ -252,7 +251,7 @@ nav #adm::after {
 
 main {
    grid-area: main;
-   margin: 0;
+   margin: auto;
 }
 
 .banner {
@@ -278,17 +277,6 @@ main {
    color: #c4565f3c;
 }
 
-.conteudo {
-   margin: auto;
-   height: 100vh;
-   width: 98vw;
-   padding: 20px;
-   padding-top: 120px;
-   background-color: var(--color-black);
-   border-radius: 5px;
-   
-}
-
 .grid_sobre_a_banda {
    display: grid;
    grid-template-areas:
@@ -312,7 +300,19 @@ main {
    }
 
 }
-
+.grid_sobre_a_banda .conteudo {
+   grid-area: conteudo;
+   margin: auto;
+   height: 100vh;
+   width: 98vw;
+   padding: 20px;
+   padding-top: 120px;
+   background: rgb(18,25,43);
+background: linear-gradient(190deg, rgba(18,25,43,1) 10%, rgba(18,18,18,1) 90%);
+   border-radius: 5px;
+   
+   
+}
 .grid_sobre_a_banda .title {
    grid-area: title;
    width: 100%;
@@ -430,12 +430,12 @@ main {
 .grid_midia .spotify {
    grid-area: spotify;
    margin: auto;
-   margin-top: 10px;
+   margin-top: 5px;
    height: 100vh;
    width: 98vw;
    padding: 20px;
    padding-top: 120px;
-   background-color: var(--color-black);
+   background-color: #121212;
    border-radius: 5px;
   
 }
@@ -443,12 +443,12 @@ main {
 .grid_midia .youtube {
    grid-area: youtube;
    margin: auto;
-   margin-top: 10px;
+   margin-top: 5px;
    height: 100vh;
    width: 98vw;
    padding: 20px;
    padding-top: 120px;
-   background-color: var(--color-black);
+   background-color:  #121212;
    border-radius: 5px;
   
 }
