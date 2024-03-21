@@ -16,35 +16,6 @@ function scrollToSection(event) {
     targetElement.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Seleciona os elementos do HTML
-const cards = document.querySelectorAll(".integrante");
-const links = document.querySelectorAll(".integrantes a");
-
-// Cria uma função para esconder todos os cards
-function hideAllCards() {
-  for (let card of cards) {
-    card.style.display = "none";
-  }
-}
-
-// Cria uma função para mostrar o card correspondente ao link clicado
-function showCard(index) {
-  hideAllCards();
-  cards[index].style.display = "flex";
-}
-
-// Adiciona um evento de clique a cada link
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function () {
-    showCard(i);
-  });
-}
-
-// Mostra apenas o primeiro card quando a página for carregada
-window.addEventListener("load", function () {
-  showCard(0);
-});
-
 class FormSubmit {
   constructor(settings) {
     this.settings = settings;
@@ -142,3 +113,8 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+
+hamburger.addEventListener("click", () => nav.classList.toggle("active"));
