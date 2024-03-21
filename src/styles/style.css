@@ -2,6 +2,8 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   scrollbar-width:auto;
+   scrollbar-color: var(--color-gren) #121212;
 }
 
 body {
@@ -242,7 +244,7 @@ nav #adm::after {
    color: var(--color-gren);
    font-size: x-large;
    border-radius: 5px;
-   border: 2px solid var(--color-gren);
+   border: 3px solid var(--color-gren);
    cursor: pointer;
    transition: all 0.3s ease-in-out;
 }
@@ -316,7 +318,7 @@ header {
    padding: 20px;
    padding-top: 120px;
    background: rgb(18, 25, 43);
-   background: linear-gradient(190deg, rgba(18, 25, 43, 1) 10%, rgba(18, 18, 18, 1) 90%);
+   background: linear-gradient(190deg, rgba(18, 25, 43, 1) 20%, rgba(18, 18, 18, 1) 80%);
    border-radius: 5px;
 
 
@@ -342,6 +344,7 @@ header {
    grid-area: conteudo;
    position: relative;
    width: 700px;
+   height: 400px;
    margin: auto;
    overflow: hidden;
 }
@@ -355,22 +358,22 @@ header {
 
 
 .integrantes .slide {
-   padding: 40px 10px;
+   padding: 60px 20px;
    width: 700px;
+   height: 400px;
    margin: auto;
-
 }
 
 .bio-container {
    display: flex;
    background-color: #12192b63;
    width: 600px;
-   height: 350px;
+   height: 300px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    border-radius: 5px;
    padding: 20px;
    margin: auto;
-
+   padding: 20px;
 }
 
 .bio-image {
@@ -400,14 +403,14 @@ header {
 
 .bio-text {
    flex: 3;
+   height: 250px;
    display: flex;
    align-items: center;
    flex-direction: column;
-   justify-content: center;
+   justify-content: start;
    width: 300px;
-   padding: 25px;
+   padding: 15px;
    text-align: left;
-   line-height: 1.1;
 }
 
 .bio-text h2 {
@@ -419,7 +422,12 @@ header {
 
 .bio-text p {
    color: #fff;
+   word-wrap: break-word;
+   line-height: 1.0;
+
 }
+
+
 
 .grid_midia {
    display: grid;
@@ -457,7 +465,10 @@ header {
    width: 98vw;
    padding: 20px;
    padding-top: 120px;
-   background-color: #121212;
+   background-image: url(../assets/imagens/dunas.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: bottom;
    border-radius: 5px;
 
 }
@@ -470,32 +481,52 @@ header {
    width: 98vw;
    padding: 20px;
    padding-top: 120px;
-   background-color: #121212;
+   background: rgb(18, 18, 18);
+   background: linear-gradient(190deg, rgba(18, 18, 18, 1) 20%, rgba(18, 25, 43, 1) 80%);
    border-radius: 5px;
 
+}
+
+.grid_midia .widget {
+   display: flex;
+   justify-content: center;
 }
 
 .grid_midia .spotify .widget {
    width: 100%;
    margin: auto;
-   display: flex;
-   justify-content: center;
-   align-items: baseline;
+   margin-top: 20px;
+   display: grid;
+   grid-template-columns: repeat(2, .3fr);
+   justify-items: center;
+   align-items: center;
+   grid-column-gap: 50px;
+
+}
+
+.grid_midia .spotify .widget img {
+   height: 352px;
+   width: 352px;
+   border-radius: 5px;
 }
 
 .grid_midia .youtube .widget {
    width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: baseline;
+   display: grid;
+   grid-template-columns: repeat(2, .3fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 10px;
+   grid-column-gap: 50px;
+   justify-items: center;
+   align-items: center;
+ 
 }
-
 
 .grid_midia .title {
    grid-area: title;
    width: 100%;
    margin: auto;
-   margin-bottom: 50px;
+   margin-bottom: 20px;
    font-size: xx-large;
    color: var(--color-gren);
    text-shadow: 1px 1px 5px rgb(0, 0, 0);
