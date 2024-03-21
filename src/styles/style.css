@@ -7,7 +7,7 @@
 
 body {
    font-family: var(--font-bebas-neue);
-   background-color: #121212;
+   background-color: var(--color-black);
 }
 
 .modal {
@@ -350,7 +350,7 @@ main {
    }
    .banner {
       width: 100vw;
-      background-position: center;
+      background-position: top;
       background-repeat: no-repeat;
       background-size: contain;
    }
