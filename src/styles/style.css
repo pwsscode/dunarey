@@ -563,19 +563,24 @@ header {
 
 @media (max-width: 750px) {
 
+   .bio-image img {
+      height: 40vw;
+      width: 40vw;
+   }
+
    .grid_sobre_a_banda .title {
    }
 
    .grid_sobre_a_banda {
       display: flex;
-      height: 100vh;
-      margin-top: 0;
+      height: 110vh;
    }
 
    .grid_sobre_a_banda .conteudo {
-      height: 100vh;
+      height: 80vh;
       width: 100vw;
-      justify-content: center;
+      justify-content: top;
+      padding-top: 90px;
       align-items: center;
 
    }
@@ -586,6 +591,7 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 20px;
 
    }
 
@@ -596,8 +602,8 @@ header {
    }
 
    .integrantes .slide {
-      height: 70vh;
-      justify-content: center;
+      height: 60vh;
+      justify-content: top;
       align-items: center;
       padding-top: 0;
 
@@ -607,12 +613,10 @@ header {
       display: none;
    }
 
-   .integrantes .sp {
-      margin-top: 20px;
-   }
-
+   
    .bio-text {
       width: 80vw;
+      height: 60vw;
    }
 
    .bio-text p {
@@ -824,15 +828,17 @@ header {
 
    .grid_midia .spotify {
       width: 100vw;
-      height: 120vh;
+      padding-top: 90px;
+      height: 130vh;
       background-size: cover;
       background-position: center;
       background-color: #121212;
    }
 
    .grid_midia .youtube {
+      padding-top: 90px;
       width: 100vw;
-      height: 120vh;
+      height: 160vh;
       margin-top: 0;
    }
 
