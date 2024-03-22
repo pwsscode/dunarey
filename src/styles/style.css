@@ -562,9 +562,13 @@ header {
 
 @media (max-width: 750px) {
 
+   .bio-image .redes a {
+      margin-top: 10px;
+   }
+
    .bio-image img {
-      height: 40vw;
-      width: 40vw;
+      height: 180px;
+      width: 180px;
    }
 
    .grid_sobre_a_banda .title {
