@@ -275,18 +275,20 @@ header.rolagem a {
       left: 0;
       width: 100vw;
       height: 100vh;
+      padding-top: 10vh;
+      padding-bottom: 20vh;
       background: var(--color-black);
-      clip-path: circle(100px at 110% -50%);
+      clip-path: circle(100px at 180% -50%);
       transition: 1s ease-out;
 
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       gap: 0;
-      margin-bottom: 200px;
 
       pointer-events: none;
    }
+
 
    .nav-list a {
       opacity: 0;
@@ -318,7 +320,7 @@ header.rolagem a {
    }
 
    .nav.active .nav-list {
-      clip-path: circle(1500px at 110% -50%);
+      clip-path: circle(1500px at 180% -50%);
       pointer-events: all;
    }
 
@@ -328,7 +330,7 @@ header.rolagem a {
 
    .nav.active .hamburger {
       position: fixed;
-      top: 26px;
+      top: 55px;
       right: 16px;
       border-top-color: transparent;
    }
