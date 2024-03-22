@@ -279,7 +279,7 @@ header.rolagem a {
       transition: 1s ease-out;
 
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       gap: 0;
 
@@ -287,11 +287,10 @@ header.rolagem a {
    }
 
    .nav-list a {
-      font-size: 24px;
       opacity: 0;
    }
    .nav-list #a {
-      margin-bottom: 50px;
+      margin-bottom: 200px;
    }
 
    .nav-list li:nth-child(1) a {
