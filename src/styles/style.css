@@ -8,6 +8,7 @@
 body {
    font-family: var(--font-bebas-neue);
    background-color: #121212;
+   overflow-x: hidden;
 }
 
 .modal {
@@ -282,6 +283,7 @@ header.rolagem a {
       justify-content: space-between;
       align-items: center;
       gap: 0;
+      margin-bottom: 200px;
 
       pointer-events: none;
    }
@@ -289,9 +291,7 @@ header.rolagem a {
    .nav-list a {
       opacity: 0;
    }
-   .nav-list #a {
-      margin-bottom: 200px;
-   }
+   
 
    .nav-list li:nth-child(1) a {
       transition: 0.5s 0.2s;
@@ -573,7 +573,7 @@ header {
 
    .bio-container {
       height: 500px;
-      width: 300px;
+      width: 80vw;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -600,6 +600,9 @@ header {
       display: none;
    }
  
+   .bio-text {
+      width: 80vw;
+   }
 
 }
 
@@ -703,6 +706,10 @@ header {
 
 }
 
+.grid_midia .youtube .widget  iframe {
+   width:350px; height: 197px
+}
+
 .grid_midia .title {
    grid-area: title;
    width: 100%;
@@ -782,15 +789,19 @@ header {
 @media (max-width: 750px) {
 
    .grid_midia .spotify .widget img {
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       margin-bottom: 5px;
    }
 
    .grid_midia .spotify .widget .musica iframe {
-      width: 320px;
-      height: 320px;
+      width: 230px;
+      height: 230px;
+   }
+
+   .grid_midia .youtube .widget  iframe {
+      width: 250px;
    }
 
    .grid_midia .spotify {
@@ -814,8 +825,9 @@ header {
    .grid_midia .spotify .widget {
    display: flex;
    flex-direction: column;
-   justify-content: center;
    align-items: center;
+   justify-content: space-around;
+
   }
 
   .grid_midia .youtube .widget {
