@@ -442,7 +442,6 @@ header {
 
 .grid_sobre_a_banda .conteudo {
    grid-area: conteudo;
-   margin: auto;
    height: 100vh;
    width: 98vw;
    padding: 20px;
