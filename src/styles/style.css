@@ -2,7 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   scrollbar-color: var(--color-gren) #121212;
+   scrollbar-color: var(--color-gren) var(--color-black);
 }
 
 body {
@@ -171,7 +171,7 @@ header {
 }
 
 header.rolagem {
-   background-color: #121212;
+   background-color: var(--color-black);
    padding: 10px 10px;
 }
 
@@ -330,6 +330,7 @@ header.rolagem #adm {
 main {
    grid-area: main;
    margin: auto;
+   background-color: #121212;
 }
 
 .banner {
@@ -345,14 +346,15 @@ main {
 }
 
 @media (max-width: 750px) {
-   .header{
+   header .rolagem{
       width: 100vw;
    }
+
    .banner {
       width: 100vw;
       background-position: top;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size:contain;
    }
 }
 
@@ -370,11 +372,12 @@ main {
 .grid_sobre_a_banda {
    display: grid;
    grid-template-areas:
+      "header"
       "title"
       "conteudo"
-      "integrantes"
    ;
    grid-template-columns: 1fr;
+   grid-template-rows: .3fr .1fr 1fr;
    height: 100vh;
    width: 100%;
    max-width: 1200px;
@@ -516,16 +519,52 @@ header {
 
 }
 
+@media (max-width: 750px) {
+  
 
+   .grid_sobre_a_banda .conteudo {
+      width: 100vw;
+   }
+
+   .bio-container {
+      flex-direction: column;
+      align-items: center;
+      height: 150vw;
+      width: auto;
+   }
+
+   .integrantes {
+      height: 160vw;
+      padding: 20px;
+      justify-content: center;
+      align-items: top;
+   }
+
+   .integrantes .slide {
+      height: auto;
+      padding-top: 20px;
+      justify-content: center;
+      align-items: top;
+   }
+
+   
+ 
+
+}
 
 .grid_midia {
    display: grid;
    grid-template-areas:
+      "header"
       "title"
-      "conteudo"
+      "spotify"
+      "youtube"
+      "footer"
    ;
    height: 100vh;
    width: 100%;
+   grid-template-rows: .1fr .1fr 1fr 1fr .1fr;
+   grid-template-columns: 1fr;
    max-width: 1200px;
 
    @media (min-width: 48em) {
@@ -686,4 +725,52 @@ header {
    color: var(--color-gren);
    cursor: pointer;
    text-decoration: none;
+   margin-bottom: 20px;
+}
+
+@media (max-width: 750px) {
+
+   .grid_midia .spotify {
+      width: 100vw;
+      height: 120vh;
+      background-size: cover;
+      background-position: center;
+      background-color: #121212;
+   }
+
+   .grid_midia .youtube {
+      width: 100vw;
+      height: 120vh;
+      margin-top: 0;
+   }
+
+   .grid_midia .title {
+      flex-direction: column;
+   }
+
+   .grid_midia .spotify .widget {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+  .grid_midia .youtube .widget {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+  footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+  }
+
+  footer h2 {
+   margin-top: 10px;
+  }
 }
