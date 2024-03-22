@@ -260,10 +260,40 @@ header.rolagem a {
    transition: 0.3s;
 }
 
+#contato {
+   padding: 5px;
+   background: transparent;
+   width: 100px;
+   height: 48px;
+   color: var(--color-gren);
+   font-size: x-large;
+   border-radius: 5px;
+   border: 3px solid var(--color-gren);
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+   margin-right: 50px;
+}
+
+#contato:hover {
+   box-shadow: 0 0 15px var(--color-gren), inset 0 0 15px var(--color-gren);
+   text-shadow: 0 0 15px var(--color-gren);
+}
+
+main {
+   grid-area: main;
+   margin: auto;
+   background-color: #121212;
+}
+
+
 @media (max-width: 750px) {
    .hamburger {
       display: block;
       z-index: 1;
+   }
+
+   #contato {
+      margin-right: 0;
    }
 
    .nav-list {
@@ -290,6 +320,7 @@ header.rolagem a {
    .nav-list a {
       opacity: 0;
    }
+   
 
 
    .nav-list li:nth-child(1) a {
@@ -342,31 +373,6 @@ header.rolagem a {
    }
 }
 
-#contato {
-   font-family: var(--font-bebas-neue);
-   padding: 5px;
-   background: transparent;
-   width: 100px;
-   height: 48px;
-   color: var(--color-gren);
-   font-size: x-large;
-   border-radius: 5px;
-   border: 3px solid var(--color-gren);
-   cursor: pointer;
-   transition: all 0.3s ease-in-out;
-   margin-right: 50px;
-}
-
-#contato:hover {
-   box-shadow: 0 0 15px var(--color-gren), inset 0 0 15px var(--color-gren);
-   text-shadow: 0 0 15px var(--color-gren);
-}
-
-main {
-   grid-area: main;
-   margin: auto;
-   background-color: #121212;
-}
 
 .banner {
    margin: auto;
