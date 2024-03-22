@@ -114,7 +114,21 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+
+
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+
+const menuItems = document.querySelectorAll(".nav-list a"); // Selecione os links do menu
+
+// Adicione um ouvinte de clique a cada item do menu
+menuItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        // Fecha o menu (remove a classe "active")
+        nav.classList.remove("active");
+    });
+});
+
+// O restante do seu código aqui...
